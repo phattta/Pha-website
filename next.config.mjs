@@ -1,4 +1,3 @@
-// next.config.mjs
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   images: {
@@ -14,6 +13,10 @@ export default {
       {
         protocol: 'https',
         hostname: 'e7.pngegg.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn-icons-png.flaticon.com', // Added the correct hostname here
       },
     ],
   },
