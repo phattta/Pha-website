@@ -22,7 +22,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
             alt="Camera"
             width={60}
             height={60}
-            className="circle-image" /* เพิ่ม class สำหรับทำให้เป็นวงกลม */
+            className="circle-image" 
           />
         </div>
         <form onSubmit={handleLogin}>
