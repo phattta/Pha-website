@@ -1,31 +1,25 @@
+// src/app/page.tsx
 "use client";
 
-import React, { useState } from "react";
-import Login from "./login/Login";
-import Section1 from "./section/Section1";
-import Section2 from "./section/Section2";
-import Section3 from "./section/Section3";
-import Section4 from "./section/Section4";
+import { useState } from 'react';
+import Home1 from './Home/Home1';
 
-export default function HomePage() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
+const Home = () => {
+  const [isLoggedIn] = useState(true);
 
   return (
-    <div>
+    <>
       {isLoggedIn ? (
-        <>
-          <Section1 />
-          <Section2 />
-          <Section3 />
-          <Section4 />
-        </>
+        <div>
+          <Home1 />
+        </div>
       ) : (
-        <Login onLogin={handleLogin} />
+        <div>
+          <p>Please log in to access this content.</p>
+        </div>
       )}
-    </div>
+    </>
   );
-}
+};
+
+export default Home;
