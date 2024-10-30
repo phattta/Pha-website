@@ -1,6 +1,6 @@
 // src/app/products/[id]/page.tsx
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { useRouter } from 'next/router';
+"use client";
+
 import { useCart } from '@/context/CartContext';
 import Image from 'next/image';
 
@@ -11,9 +11,11 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
   return (
     <div>
       <h1>{doll.name}</h1>
-      <Image src={doll.image} alt={doll.name} style={{ width: '200px' }} />
+      <Image src={doll.image} alt={doll.name} width={200} height={200} />
       <p>Price: ${doll.price}</p>
-      <button onClick={() => addToCart(doll)}>Add to Cart</button>
+      <button onClick={() => addToCart(doll)} style={{ padding: '8px 12px', backgroundColor: '#ff6600', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
+        Add to Cart
+      </button>
     </div>
   );
 };
